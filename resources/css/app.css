@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .btn {
+      @apply text-base font-medium rounded-lg px-3 py-2 cursor-pointer transition ease-in-out;
+    }
+  
+    .btn--primary {
+      @apply bg-green-500 text-white hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 dark:text-gray-100 dark:hover:text-white;
+    }
+  
+    .btn--secondary {
+      @apply bg-slate-100 text-slate-500 hover:bg-slate-200;
+    }
+  
+    .active {
+      @apply text-slate-600 hover:text-slate-600 font-bold;
+    }
+
+    .day-of-week {
+      @apply text-base sm:text-lg font-bold text-gray-500 border border-b-0 border-gray-300 bg-gray-50;
+    }
+    
+    .day-of-week > * {
+      @apply text-right pt-2 sm:pt-4 pb-2 pr-2 h-full border border-b-0 border-gray-300;
+    }
+    
+    .day-of-week,
+    .days-grid {
+      @apply grid grid-cols-7;
+    }
+    
+    .days-grid {
+      @apply relative h-full border border-gray-300;
+    }
+    
+    .calendar-day {
+      @apply relative text-base p-2 h-10 sm:h-20 lg:h-32 hover:bg-gray-200 cursor-pointer;
+    }
+    
+    .calendar-day > span {
+      @apply absolute top-1 right-1 flex justify-center align-middle w-6 h-6;
+    }
+
+    .current {
+      @apply bg-white text-gray-500 border border-gray-300;
+    }
+
+    .not-current {
+      @apply bg-gray-100 text-gray-300 border border-gray-300;
+    }
+    
+    .calendar-today {
+      @apply p-2;
+    }
+    
+    .calendar-today > span {
+      @apply text-white rounded-full bg-green-600;
+    }
+
+    .input {
+      @apply bg-gray-200 border border-gray-300 text-center p-4 rounded-md;
+    }
+    .error {
+      @apply border-red-600 bg-red-200;
+    }
+  }
